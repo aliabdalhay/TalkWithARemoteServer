@@ -1,0 +1,10 @@
+implementation a:
+
+pro: when we save the token locally, we avoid asking it from the server every time, which is an expensive request.
+con: if we save the user token for reuse we are risking our users, because someone might get access to this token
+and can use our user information. if we don't save the token it's less of a risk
+
+implementation b:
+
+pro: less risk for stealing our user information since we do not save the token anywhere
+cons: expensive request each time, makes the user wait to get his/her information
